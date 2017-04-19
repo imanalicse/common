@@ -6,11 +6,9 @@
     <script src = "js/script.js"></script>
 </head>
 
-
 <body>
-<div ng-controller="GreetingController">
-    {{ greeting }}
-</div>
-
+    <div ng-controller="GreetingController">
+        {{ greeting }}
+    </div>
 </body>
 </html>

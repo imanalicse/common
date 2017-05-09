@@ -6,7 +6,7 @@ $postData = array(
     'testcookie' => '1'
 );
 
-//$file = __DIR__ . DIRECTORY_SEPARATOR . "cookie.txt";
+$file = __DIR__ . DIRECTORY_SEPARATOR . "cookie.txt";
 
 $ch = curl_init();
 curl_setopt_array($ch, array(
@@ -16,7 +16,8 @@ curl_setopt_array($ch, array(
     CURLOPT_POSTFIELDS => $postData,
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_COOKIESESSION => true,
-    CUROPT_COOKIEJAR => 'cookie.txt'
+    CURLOPT_COOKIEFILE => $file,
+    CURLOPT_COOKIEJAR  => $file,
 ));
 
 $output = curl_exec($ch);

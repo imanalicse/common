@@ -8,6 +8,3 @@ https://www.jordangrayconsulting.com/2017/03/7-best-stretches-for-better-sex/
 
 
 https://www.youtube.com/watch?v=BQ4gUMaVJrg
-
-যাঁর স্ত্রীর মাঝে এই ৪টি গুণ আছে সেই স্বামী সৌভাগ্যবান
-http://bangla.eibarta.com/lifestyle/77651/

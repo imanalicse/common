@@ -11,13 +11,17 @@ gulp.task('imagemin', function() {
     gulp.src(img_src)
         //.pipe(changed(img_dest))
         .pipe(imagemin())
-        .pipe(gulp.dest(img_dest));
+        .pipe(gulp.dest(img_dest)
+        );
 });
 
 gulp.task('styles', function() {
+
     gulp.src(['src/styles/*.css'])
         .pipe(concat('styles.css'))
         .pipe(autoprefix('last 2 versions'))
         .pipe(minifyCSS())
-        .pipe(gulp.dest('build/styles/'));
+        .pipe(gulp.dest('build/styles')
+        );
+
 });

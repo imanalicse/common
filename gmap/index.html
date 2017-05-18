@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+    <script src="gmap.js"></script>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    function initMap() {
+        var lat = '-35.3518759';
+        var long = '149.234984';
+
+        var myCenter = new google.maps.LatLng(lat, long);
+
+        var mapCanvas = document.getElementById("map");
+        var mapOptions = {center: myCenter, zoom: 12};
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        var marker = new google.maps.Marker({position: myCenter});
+        marker.setMap(map);
+
+        var contentString = 'aaaaaaaa';
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        // Zoom to 11 when clicking on marker
+        google.maps.event.addListener(marker, 'click', function () {
+            map.setZoom(20);
+            map.setCenter(marker.getPosition());
+        });
+
+        marker.addListener('mouseover', function () {
+            infowindow.open(map, marker);
+        });
+
+        marker.addListener('mouseout', function() {
+            infowindow.close();
+        });
+    }
+</script>
+
+<h5>Location map</h5>
+<div id="map" class="img-responsive" style="position: absolute; width: 331px; height: 303px"></div>
+<script async defer
+
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAevLXLSLchPs7y0lSnPsDi0MiIFh2TxHg&libraries=places&callback=initMap">
+</script>
+
+</html>
